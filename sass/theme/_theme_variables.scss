@@ -1,0 +1,85 @@
+// Use this file to overwrite the basic Bootstrap variables and add your own variables
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
+// Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
+
+$primary: #323b44; // Thats a sample how you could change a BootStrap variable.
+
+/* HEX */
+$color1: #3980bdff;
+$color2: #00a7e1ff;
+$color3: #bcabaeff;
+$color4: #fffcffff;
+$color5: #111344ff;
+
+/* GRADIENT */
+$gradient-top: linear-gradient(
+	0deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-right: linear-gradient(
+	90deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-bottom: linear-gradient(
+	180deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-left: linear-gradient(
+	270deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-top-right: linear-gradient(
+	45deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-bottom-right: linear-gradient(
+	135deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-top-left: linear-gradient(
+	225deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-bottom-left: linear-gradient(
+	315deg,
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
+$gradient-radial: radial-gradient(
+	#3980bdff,
+	#00a7e1ff,
+	#bcabaeff,
+	#fffcffff,
+	#111344ff
+);
