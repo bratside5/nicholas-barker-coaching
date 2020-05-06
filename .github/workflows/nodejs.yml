@@ -8,13 +8,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x]
     if: github.ref != 'refs/heads/master'
     steps:
       - name: 'Checkout'
         uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: gulp copy-assets
       - run: gulp compile
