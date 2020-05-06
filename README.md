@@ -4,6 +4,9 @@
 
 Wordpress Theme Using Bootstrap 4
 
+## Production Folder
+The folder intended for the server is located in the /dist directory. Any files outside of that directory are the uncompiled development files, if you intend to work on any of the themes core files then clone the repository to your machine and run the instructions below. Then once you have completed local development run the ```gulp compile ``` command and push your changes back to github.
+
 ## Dev Installation
 
 If loading the development version for the first time then ensure you have installed Node/NPM and run in the root of the theme:
@@ -72,6 +75,7 @@ The `empty.php` template displays a header and a footer only. A good starting po
 
 The `fullwidthpage.php` template has full width layout without a sidebar.
 
+#### Helpful Snippets
 You can also easily add a WP Query directly into the code to query your chosen post type if need be: The below snippet will query for a post type and return a boostrap grid of images with two responsive breakpoints
 
 ```php
