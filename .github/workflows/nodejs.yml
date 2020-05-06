@@ -1,4 +1,4 @@
-name: 'Build Production Distribution'
+name: "Build Production Distribution"
 on:
   push:
     branches:
@@ -8,47 +8,28 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
     if: github.ref != 'refs/heads/master'
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@master
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: "Node JS"
         uses: actions/setup-node@v1
         with:
-           node-version: ${{ matrix.node-version }}
+          node-version: 12
       - run: npm install
       - run: gulp copy-assets
       - run: gulp compile
+
   deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
-      - name: 'Checkout'
+      - name: "Checkout"
         uses: actions/checkout@master
-
-
-
-# name: Node Continuous Integration
-
-# on:
-#   pull_request:
-#     branches: [master]
-#   # push:
-#   #   branches: [development]
-
-# jobs:
-#   test_pull_request:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@master
-#       - uses: actions/setup-node@master
-#         # - uses: actions/checkout@v2
-#         # - uses: actions/setup-node@v1
-#         with:
-#           node-version: 12
-#       - run: npm install
-#       - run: gulp copy-assets
-#       - run: gulp compile
+      - name: "Node JS"
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - run: gulp copy-assets
+      - run: gulp compile
