@@ -5,7 +5,7 @@
 Wordpress Theme Using Bootstrap 4
 
 ## Production Folder
-The folder intended for the server is located in the /dist directory. Any files outside of that directory are the uncompiled development files, if you intend to work on any of the themes core files then clone the repository to your machine and run the instructions below. Then once you have completed local development run the ```bash gulp compile ``` command and push your changes back to github.
+The folder intended for the server is located in the /dist directory. Any files outside of that directory are the uncompiled development files, if you intend to work on any of the themes core files then clone the repository to your machine and run the instructions below. Then once you have completed local development run the ```gulp compile ``` command and push your changes back to github.
 
 ## Dev Installation
 
