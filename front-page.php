@@ -56,7 +56,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     <!-- Second Section 🥯  -->
     <section class="about-me">
-        <div class="container  pb-5 pt-5">
+        <div class="container pb-5 pt-5">
             <div class="profile-pic-div rounded-circle mb-1">
                 <?php if ( get_field( 'second_section_profile_pic' ) ) : ?>
                 <img class='profile-pic rounded-circle mb-3'
@@ -164,27 +164,29 @@ $container = get_theme_mod( 'understrap_container_type' );
     </section>
 
 
-    <section class="qualifications container text-center p-3 bg-light">
-        <div class="qualification-title container">
-            <h1 class="">My Qualifications</h1>
-        </div>
-        <div class="row">
-            <?php $the_query=new WP_Query( array( 'post_type'=> 'qualifications' ) ); ?>
-            <?php if ( $the_query->have_posts() ) : ?>
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <?php $featured_img_url=get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-            <div class="col-xs-6 col-md-4 my-3">
-                <div class="container">
-                    <img class="img-responsive qualification-img" src="<?php echo $featured_img_url ?>" alt="">
-                </div>
+    <section class="qualifications text-center p-3 bg-light">
+        <div class="container">
+            <div class="qualification-title container">
+                <h1 class="">My Qualifications</h1>
             </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-            <?php else : ?>
-            <p>
-                <?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?>
-            </p>
-            <?php endif; ?>
+            <div class="row">
+                <?php $the_query=new WP_Query( array( 'post_type'=> 'qualifications' ) ); ?>
+                <?php if ( $the_query->have_posts() ) : ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <?php $featured_img_url=get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+                <div class="col-xs-6 col-md-4 my-3">
+                    <div class="container">
+                        <img class="img-responsive qualification-img" src="<?php echo $featured_img_url ?>" alt="">
+                    </div>
+                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php else : ?>
+                <p>
+                    <?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?>
+                </p>
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 

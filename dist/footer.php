@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 
-<footer class="footer mobile-footer">
+<footer class="footer">
     <div class="footer-container text-light mx-3 px-3">
         <div class="d-flex justify-content-around pt-2">
             <div class="container py-3">
@@ -36,20 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					}
 					?>
             </div>
-            <div class="container d-flex d-lg-none justify-content-around align-items-center">
-                <div class="text-muted ">
-                    <a href="<?php the_field( 'facebook_icon_link' ); ?>"><i
-                            class="fa fa-facebook-square fa-2x"></i></a>
-                </div>
-                <div class="text-muted ">
-                    <a href="<?php the_field( 'email_icon_link_copy' ); ?>"><i class="fa fa-envelope fa-2x"></i></a>
-                </div>
-                <div class="text-muted ">
-                    <a target="_blank" href="<?php the_field( 'whatsapp_icon_link' ); ?>"><i
-                            class="fa fa-phone fa-2x"></i></a>
-                </div>
-            </div>
-            <div class="desktop-footer">
+            <div class="container d-flex footer-icons justify-content-between align-items-center">
                 <div class="text-muted ">
                     <a href="<?php the_field( 'facebook_icon_link' ); ?>"><i
                             class="fa fa-facebook-square fa-2x"></i></a>
